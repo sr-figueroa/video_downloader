@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tab { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+        .platform-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; font-size: 15px; font-weight: 700; line-height: 1; }
+        .youtube-icon { color: #ff4d4d; }
+        .tiktok-icon { color: #25f4ee; font-size: 20px; }
+        .twitter-icon { color: #ffffff; font-size: 16px; }
+        .tab.active .platform-icon { color: currentColor; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📥 Video Downloader</h1>
+        <p class="subtitle">Descarga videos de YouTube, TikTok y X</p> <!-- Selector de plataforma -->
+        <div class="tabs"> <button class="tab active" data-platform="youtube"><span class="platform-icon youtube-icon" aria-hidden="true">▶</span><span>YouTube</span></button> <button class="tab"
+            data-platform="tiktok"><span class="platform-icon tiktok-icon" aria-hidden="true">♪</span><span>TikTok</span></button> <button class="tab" data-platform="twitter"><span class="platform-icon twitter-icon" aria-hidden="true">𝕏</span><span>X / Twitter</span></button>
+        </div> <!-- Input URL -->
+        <div class="input-group"> <label>Enlace del video</label> <input type="url" id="videoUrl"
+                placeholder="https://youtube.com/watch?v=..."> </div> <!-- Opciones de formato -->
+        <div class="formats"> <label class="format-option"> <input type="radio" name="format" value="mp4" checked>
+                <span>🎬 Video (MP4)</span> </label> <label class="format-option"> <input type="radio" name="format"
+                    value="mp3"> <span>🎵 Audio (MP3)</span> </label> </div> <!-- Botón --> <button id="downloadBtn"
+            class="btn-primary"> Descargar </button> <!-- Resultado -->
+        <div id="result" class="result hidden"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
