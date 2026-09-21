@@ -1,4 +1,4 @@
-const API_BASE_URL = window.location.port === '3001' ? '' : 'http://localhost:3001';
+const API_BASE_URL = window.location.port === '';
 let currentPlatform = 'youtube';
 
 const tabs = document.querySelectorAll('.tab');
