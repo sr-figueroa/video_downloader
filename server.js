@@ -62,7 +62,7 @@ app.post('/api/download', async (req, res) => {
 		console.log('Descargando...', platform, url);
 
 		await new Promise((resolve, reject) => {
-			execFile('yt-dlp', args, { timeout: 120000 }, (error, stdout, stderr) => {
+			execFile('python3', ['-m', 'yt_dlp', ...args], { timeout: 120000 }, (error, stdout, stderr) => {
 				if (error) {
 					console.error('Error:', stderr || error);
 					error.downloadDetails = stderr.trim();
