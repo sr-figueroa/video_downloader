@@ -1,4 +1,4 @@
-const API_BASE_URL = window.location.port === '';
+const API_BASE_URL = '';
 let currentPlatform = 'youtube';
 
 const tabs = document.querySelectorAll('.tab');
