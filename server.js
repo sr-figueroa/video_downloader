@@ -48,7 +48,7 @@ app.post('/api/download', async (req, res) => {
 
 	try {
 		let args;
-		const extractorArgs = ['--js-runtimes', 'node', '--remote-components', 'ejs:github'];
+		const extractorArgs = ['--cookies', 'cookies.txt', '--js-runtimes', 'node', '--remote-components', 'ejs:github'];
 		if (platform === 'tiktok') {
 			extractorArgs.push('--impersonate', 'chrome');
 		}
